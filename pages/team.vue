@@ -146,8 +146,8 @@
     </div>
     <!-- Add Team Member Button -->
     <button
-      @click="showAddTeamMemberForm = true"
       class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+      @click="showAddTeamMemberForm = true"
     >
       + Add Team Member
     </button>
@@ -166,7 +166,7 @@
       From: "opacity-100"
       To: "opacity-0"
   -->
-      <div @click="closeModal" class="fixed inset-0 transition-opacity">
+      <div class="fixed inset-0 transition-opacity" @click="closeModal">
         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
       </div>
 
@@ -206,8 +206,8 @@
           </div>
           <div class="mt-3 text-center sm:mt-5">
             <h3
-              class="text-lg leading-6 font-medium text-gray-900"
               id="modal-headline"
+              class="text-lg leading-6 font-medium text-gray-900"
             >
               Invite Link
             </h3>
@@ -217,8 +217,8 @@
                   >https://ourappdomain.test/invite/asdfkjasdk359023oij/w3inz/9wjzwhzngz</a
                 >
                 <button
-                  @click="linkCopied = true"
                   class="copy-link text-gray-900 w-8 h-8"
+                  @click="linkCopied = true"
                 >
                   <svg
                     v-show="!linkCopied"
@@ -254,9 +254,9 @@
         <div class="mt-5 sm:mt-6">
           <span class="flex w-full rounded-md shadow-sm">
             <button
-              @click="closeModal"
               type="button"
               class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+              @click="closeModal"
             >
               Go back to dashboard
             </button>
