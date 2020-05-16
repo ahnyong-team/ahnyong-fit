@@ -2,8 +2,8 @@
   <div class="fixed right-0 bottom-0 mb-4 mr-4 z-0">
     <button
       v-show="!showForm"
-      @click="showForm = true"
       class="btn btn-primary text-green-50 h-12 w-12 rounded-full bg-green-700 border p-2"
+      @click="showForm = true"
     >
       <svg
         fill="none"
@@ -30,7 +30,7 @@
       From: "opacity-100"
       To: "opacity-0"
   -->
-      <div @click="showForm = false" class="fixed inset-0 transition-opacity">
+      <div class="fixed inset-0 transition-opacity" @click="showForm = false">
         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
       </div>
 
@@ -70,8 +70,8 @@
           </div>
           <div class="mt-3 text-center sm:mt-5">
             <h3
-              class="text-lg leading-6 font-medium text-gray-900"
               id="modal-headline"
+              class="text-lg leading-6 font-medium text-gray-900"
             >
               How Swole are you?
             </h3>

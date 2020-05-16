@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <!-- Off-canvas menu for mobile -->
-    <div class="md:hidden">
+    <div @click="showMobileMenu = false" class="md:hidden">
       <div v-show="showMobileMenu" class="fixed inset-0 flex z-40">
         <!--
             Off-canvas menu overlay, show/hide based on off-canvas menu state.
@@ -77,9 +77,9 @@
                 /> -->
               </div>
               <nav class="mt-5 px-2">
-                <a
-                  href="/fit"
-                  class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
+                <nuxt-link
+                  to="/fit"
+                  class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-300 rounded-md text-white bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
                 >
                   <svg
                     class="mr-4 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
@@ -95,9 +95,9 @@
                     />
                   </svg>
                   Dashboard
-                </a>
-                <a
-                  href="/team"
+                </nuxt-link>
+                <nuxt-link
+                  to="/team"
                   class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
                 >
                   <svg
@@ -114,11 +114,11 @@
                     />
                   </svg>
                   Team
-                </a>
+                </nuxt-link>
               </nav>
             </div>
             <div class="flex-shrink-0 flex bg-gray-700 p-4">
-              <a href="/profile" class="flex-shrink-0 group block">
+              <nuxt-link to="/profile" class="flex-shrink-0 group block">
                 <div class="flex items-center">
                   <div>
                     <img
@@ -138,7 +138,7 @@
                     </p>
                   </div>
                 </div>
-              </a>
+              </nuxt-link>
             </div>
           </div>
         </transition>
@@ -161,9 +161,9 @@
           </div>
           <!-- Sidebar component, swap this element with another sidebar if you like -->
           <nav class="mt-5 flex-1 px-2 bg-gray-800">
-            <a
-              href="/fit"
-              class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
+            <nuxt-link
+              to="/fit"
+              class="group flex items-center px-2 py-2 text-sm leading-5 font-medium rounded-md text-gray-300 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
             >
               <svg
                 class="mr-3 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
@@ -179,9 +179,9 @@
                 />
               </svg>
               Dashboard
-            </a>
-            <a
-              href="/team"
+            </nuxt-link>
+            <nuxt-link
+              to="/team"
               class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
             >
               <svg
@@ -198,11 +198,14 @@
                 />
               </svg>
               Team
-            </a>
+            </nuxt-link>
           </nav>
         </div>
-        <div class="flex-shrink-0 flex bg-gray-700 p-4">
-          <a href="/profile" class="flex-shrink-0 w-full group block">
+        <div class="flex-shrink-0 flex ">
+          <nuxt-link
+            to="/profile"
+            class="flex-shrink-0 w-full group block bg-gray-700 p-4"
+          >
             <div class="flex items-center">
               <div>
                 <img
@@ -222,7 +225,7 @@
                 </p>
               </div>
             </div>
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -262,4 +265,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.nuxt-link-exact-active {
+  @apply text-white bg-gray-900;
+}
+</style>
