@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <!-- Off-canvas menu for mobile -->
-    <div @click="showMobileMenu = false" class="md:hidden">
+    <div class="md:hidden" @click="showMobileMenu = false">
       <div v-show="showMobileMenu" class="fixed inset-0 flex z-40">
         <!--
             Off-canvas menu overlay, show/hide based on off-canvas menu state.
@@ -79,7 +79,7 @@
               <nav class="mt-5 px-2">
                 <nuxt-link
                   to="/fit"
-                  class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-300 rounded-md text-white bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
+                  class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-300 rounded-md focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
                 >
                   <svg
                     class="mr-4 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
@@ -117,8 +117,11 @@
                 </nuxt-link>
               </nav>
             </div>
-            <div class="flex-shrink-0 flex bg-gray-700 p-4">
-              <nuxt-link to="/profile" class="flex-shrink-0 group block">
+            <div class="">
+              <nuxt-link
+                to="/profile"
+                class="flex-shrink-0 group block bg-gray-700 p-4"
+              >
                 <div class="flex items-center">
                   <div>
                     <img
