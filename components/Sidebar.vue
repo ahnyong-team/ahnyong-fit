@@ -29,9 +29,9 @@
         <div class="relative flex-1 flex flex-col max-w-xs w-full bg-gray-800">
           <div class="absolute top-0 right-0 -mr-14 p-1">
             <button
-              @click="showMobileMenu = !showMobileMenu"
               class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600"
               aria-label="Close sidebar"
+              @click="showMobileMenu = !showMobileMenu"
             >
               <svg
                 class="h-6 w-6 text-white"
@@ -272,7 +272,7 @@ export default {
   data: () => ({
     showMobileMenu: false
   })
-};
+}
 </script>
 
 <style></style>
