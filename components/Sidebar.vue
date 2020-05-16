@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="">
     <!-- Off-canvas menu for mobile -->
     <div class="md:hidden">
       <div v-if="showMobileMenu" class="fixed inset-0 flex z-40">
@@ -245,9 +245,9 @@
     </div>
     <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
       <button
-        @click="showMobileMenu = !showMobileMenu"
         class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
         aria-label="Open sidebar"
+        @click="showMobileMenu = !showMobileMenu"
       >
         <svg
           class="h-6 w-6"
