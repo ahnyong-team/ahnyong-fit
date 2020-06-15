@@ -206,6 +206,52 @@
               <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
             </td>
           </tr>
+          <tr v-for="member in team" :key="member.id">
+            <td class="px-6 py-4 whitespace-no-wrap">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 h-10 w-10">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-4">
+                  <div class="text-sm leading-5 font-medium text-gray-900">
+                    {{ member.name }}
+                  </div>
+                  <div class="text-sm leading-5 text-gray-500">
+                    bernardlane@example.com
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap">
+              <div class="text-sm leading-5 text-gray-900">
+                +{{ member.latest }}
+              </div>
+              <div class="text-sm leading-5 text-gray-500">
+                {{ member.completedTotal }}
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap">
+              <span
+                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800"
+              >
+                Inactive
+              </span>
+            </td>
+            <td
+              class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+            >
+              Owner
+            </td>
+            <td
+              class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium"
+            >
+              <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -213,7 +259,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'TeamTable',
+  components: {},
+  props: {
+    team: {
+      type: Array,
+      required: true
+    }
+  }
+}
 </script>
 
 <style></style>

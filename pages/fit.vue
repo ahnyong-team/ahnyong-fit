@@ -5,7 +5,7 @@
     </div>
     <div class="flex flex-col">
       <TeamSummary />
-      <TeamTable />
+      <TeamTable :team="members" />
       <AddRepsForm />
     </div>
   </div>
