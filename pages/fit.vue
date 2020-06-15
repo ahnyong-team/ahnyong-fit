@@ -21,6 +21,28 @@ export default {
     AddRepsForm,
     TeamTable,
     TeamSummary
+  },
+  data() {
+    return {
+      group: {},
+      members: [],
+      state: 'LOADING'
+    }
+  },
+  computed: {
+    groupTargetReps() {
+      return 1000
+    }
+  },
+  created() {
+    fetch('/api/dashboard')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log({ data })
+        this.state = 'DATA_LOADED'
+        this.group = data.group
+        this.members = data.members
+      })
   }
 }
 </script>
