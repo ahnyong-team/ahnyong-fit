@@ -76,9 +76,36 @@
               How Swole are you?
             </h3>
             <div class="mt-2">
-              <p class="text-sm leading-5 text-gray-500">
-                input goes here
-              </p>
+              <label
+                for="exercise-name"
+                class="block text-sm font-medium leading-5 text-gray-700 text-left"
+              >
+                Exercise Name
+              </label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <select
+                  id="exercise-name"
+                  class="form-select block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5 mb-6"
+                >
+                  <option> - </option>
+                  <option>Pushups</option>
+                  <option>Situps</option>
+                  <option>Squats</option>
+                </select>
+              </div>
+              <label
+                for="reps"
+                class="block text-sm font-medium leading-5 text-gray-700 text-left"
+              >
+                Reps
+              </label>
+              <div class="mt-1 rounded-md shadow-sm">
+                <input
+                  id="reps"
+                  type="number"
+                  class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                />
+              </div>
             </div>
           </div>
         </div>

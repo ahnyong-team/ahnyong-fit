@@ -97,6 +97,25 @@
                   Dashboard
                 </nuxt-link>
                 <nuxt-link
+                  to="/myExercises"
+                  class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-300 rounded-md focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
+                >
+                  <svg
+                    class="mr-4 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10M9 21h6"
+                    />
+                  </svg>
+                  My Exercises
+                </nuxt-link>
+                <nuxt-link
                   to="/team"
                   class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
                 >
@@ -184,6 +203,25 @@
               Dashboard
             </nuxt-link>
             <nuxt-link
+              to="/myExercises"
+              class="group flex items-center px-2 py-2 text-sm leading-5 font-medium rounded-md text-gray-300 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
+            >
+              <svg
+                class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                ></path>
+              </svg>
+              My Exercises
+            </nuxt-link>
+            <nuxt-link
               to="/team"
               class="mt-1 group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
             >
@@ -234,7 +272,7 @@
     </div>
     <div
       v-show="!showMobileMenu"
-      class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 fixed z-10 ml-3 mt-2"
+      class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 fixed z-10 mr-3 mt-2 right-0"
     >
       <!-- hamburger menu -->
       <button
